@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constraint-mappings
+        xmlns="http://xmlns.jcp.org/xml/ns/validation/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/validation/mapping
+            http://xmlns.jcp.org/xml/ns/validation/mapping/validation-mapping-2.0.xsd"
+        version="2.0">
+
+    <default-package>com.othmen.test.spring.webflux.validation.xml</default-package>
+
+    <bean class="Model" ignore-annotations="false">
+        <field name="alwaysNull" ignore-annotations="true"/>
+    </bean>
+    
+    <bean class="ControllerOverridedWithValidationXml">
+        <method name="postModel" ignore-annotations="true">
+            <parameter type="reactor.core.publisher.Mono" ignore-annotations="true" />
+        </method>
+
+        <method name="getModel" ignore-annotations="true">
+            <parameter type="java.lang.String" ignore-annotations="true" />
+        </method>
+    </bean>
+
+</constraint-mappings>

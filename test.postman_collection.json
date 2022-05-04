@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "cb194c4e-0ba3-4b73-9e0c-30837aa3d4e1",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get model valid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/controller/model/aaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller",
+						"model",
+						"aaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get model invalid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/controller/model/aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller",
+						"model",
+						"aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post model valid id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"aaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/controller/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post model invalid id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"aaaaaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/controller/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WithOverridedValidation get model valid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/controller-overrided/model/aaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller-overrided",
+						"model",
+						"aaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WithOverridedValidation  get model invalid id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/controller-overrided/model/aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller-overrided",
+						"model",
+						"aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withValidationOverrided post model valid id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"aaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/controller-overrided/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller-overrided",
+						"model"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withValidationOverrided post model invalid id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"aaaaaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/controller-overrided/model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"controller-overrided",
+						"model"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
